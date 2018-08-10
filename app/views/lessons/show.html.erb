@@ -1,0 +1,45 @@
+<h1>Lessons#show</h1>
+<p>Find me in app/views/lessons/show.html.erb</p>
+<table>
+  <tr>
+    <th>name</th>
+    <td><%= @lesson.name %></td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td><%= @lesson.description %></td>
+  </tr>
+  <tr>
+    <th>Teacher_Name</th>
+    <td><%= @lesson.teacher_name %></td>
+  </tr>
+  <tr>
+    <th>Credit</th>
+    <td><%= @lesson.credit %></td>
+  </tr>
+  <tr>
+    <th>Grade</th>
+    <td><%= @lesson.grade %></td>
+  </tr>
+  <tr>
+    <th>Term</th>
+    <td><%= @lesson.term %></td>
+  </tr>
+  <tr>
+    <th>Week</th>
+    <td><%= @lesson.week %></td>
+  </tr>
+  <tr>
+    <th>Period</th>
+    <td><%= @lesson.period %></td>
+  </tr>
+  <tr>
+    <th>Absence_Count</th>
+    <td><%= @lesson.absence_count %></td>
+  </tr>
+  <tr>
+    <th>User.Email</th>
+    <td><%= @lesson.user.email %></td>
+  </tr>
+</table>
+<p><%= link_to '一覧に戻る', lessons_url %></p>

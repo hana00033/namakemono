@@ -1,0 +1,84 @@
+<h1>Lessons#index</h1>
+<p>Find me in app/views/lessons/index.html.erb</p>
+<table>
+  <tr class="table">
+    <th>Id</th><th>授業名</th><th>詳細</th><th>教授名</th><th>単位</th><th>学年</th><th>学期</th><th>曜日</th><th>何限</th><th>欠席・遅刻回数</th>
+  </tr>
+  <% @lessons.each do |lesson| %>
+  <tr>
+    <td><%= lesson.id %></td>
+    <td><%= lesson.name %></td>
+    <td><%= lesson.description %></td>
+    <td><%= lesson.teacher_name %></td>
+    <td><%= lesson.credit %></td>
+    <td><%= lesson.grade %></td>
+    <td><%= lesson.term %></td>
+    <td><%= lesson.week %></td>
+    <td><%= lesson.period %></td>
+    <td><%= lesson.absence_count %></td>
+    <td><%= link_to 'Show', lesson_path(lesson) %></td>
+    <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
+    <td><%= link_to 'Delete', lesson_path(lesson), method: :delete %></td>
+  </tr>
+  <% end %>
+</table>
+<p><%= link_to '授業の登録', new_lesson_path %></p>
+
+<table  border="1" width="375" cellspacing="0" cellpadding="0" bordercolor="#A4A4A4" align="right">
+<tr class="table-s">
+<th bgcolor="#FFFFFF"><font color="#FFFFFF"></font></th>
+<th bgcolor="#FFFFFF" width="50"><font color="#000000">月</font></th>
+<th bgcolor="#FFFFFF" width="50"><font color="#000000">火</font></th>
+<th bgcolor="#FFFFFF" width="50"><font color="#000000">水</font></th>
+<th bgcolor="#FFFFFF" width="50"><font color="#000000">木</font></th>
+<th bgcolor="#FFFFFF" width="50"><font color="#000000">金</font></th>
+<th bgcolor="#FFFFFF" width="50"><font color="#000000">土</font></th>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" align="right" nowrap>1</td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" align="right" nowrap>2</td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" align="right" nowrap>3</td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" align="right" nowrap>4</td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" align="right" nowrap>5</td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+<td bgcolor="#FFFFFF" valign="top" width="75"></td>
+</tr>
+</table>
+
+
