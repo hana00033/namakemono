@@ -1,44 +1,43 @@
-<h1>Lessons#show</h1>
-<p>Find me in app/views/lessons/show.html.erb</p>
-<table>
+<h1>授業名（仮）</h1>
+<table class="show-th">
   <tr>
-    <th>name</th>
+    <th>授業名</th>
     <td><%= @lesson.name %></td>
   </tr>
   <tr>
-    <th>Description</th>
+    <th>授業詳細</th>
     <td><%= @lesson.description %></td>
   </tr>
   <tr>
-    <th>Teacher_Name</th>
+    <th>教師名</th>
     <td><%= @lesson.teacher_name %></td>
   </tr>
   <tr>
-    <th>Credit</th>
+    <th>単位数</th>
     <td><%= @lesson.credit %></td>
   </tr>
   <tr>
-    <th>Grade</th>
+    <th>学年</th>
     <td><%= @lesson.grade %></td>
   </tr>
   <tr>
-    <th>Term</th>
+    <th>学期</th>
     <td><%= @lesson.term %></td>
   </tr>
   <tr>
-    <th>Week</th>
+    <th>曜日</th>
     <td><%= @lesson.week %></td>
   </tr>
   <tr>
-    <th>Period</th>
+    <th>何限</th>
     <td><%= @lesson.period %></td>
   </tr>
   <tr>
-    <th>Absence_Count</th>
-    <td><%= @lesson.absence_count %></td>
+    <th>欠席数</th>
+    <td ><%= @lesson.absence_count %></td>
   </tr>
   <tr>
-    <th>User.Email</th>
+    <th>メールアドレス</th>
     <td><%= @lesson.user.email %></td>
   </tr>
 </table>

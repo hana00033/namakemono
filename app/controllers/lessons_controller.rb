@@ -45,4 +45,17 @@ end
 def lesson_params
   params.require(:lesson).permit(:name, :description, :teacher_name, :credit, :grade, :term, :week, :period, :absence_count)
 end
+
+def about
+  @lesson = target_lesson params[:id]
+end
+
+def graph
+
+end
+
+def credit
+
+end
+
 end

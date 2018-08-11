@@ -6,7 +6,263 @@
 	white-space: nowrap;
 }
 
+h1{
+	font-family:sans-serif;
+	font-weight:100;
+	font-size:20px;
+	color:white;
+	position:fixed;
+	top:3px;
+	width: 100vw;
+	text-align: center;
+	left: 0;
+}
+
+.table-s{
+	margin-top:6px;
+	margin-bottom:70px;
+}
+
 .table-s th{
 	font-family:sans-serif;
 	font-weight:100;
+}
+
+.table-s td{
+	height:16vh;
+}
+
+.item_g{
+	display:block;
+	//line-height:0;
+	width: 100vw;
+	height:78px;
+	position: fixed;
+
+}
+
+.txt {
+	padding: 38px 0 0;
+}
+
+.txt p {
+	position: relative;
+	font-family:sans-serif;
+	font-weight:100;
+	font-size:30px;
+	width: 100vw;
+	height: 78px;
+	line-height: 78px;
+	text-align: center;
+}
+
+.txt p:before {
+	content:"";
+	display:block;
+	position: absolute;
+	height:1px;
+	width:100%;
+	top: 0;
+}
+
+.txt p:after {
+	content:"";
+	display:block;
+	position: absolute;
+	height:1px;
+	width:100%;
+	bottom: 0;
+}
+
+.txt1{
+	color: #ACB6E5;
+  	background: -webkit-linear-gradient(0deg, #FFD700, #DA70D6);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  	box-sizing: border-box;
+  	border-left: 1px solid #FFD700;
+  	border-right: 1px solid #DA70D6;
+  	margin-bottom:15px;
+}
+
+.txt1:before,
+.txt1:after {
+	background: -webkit-linear-gradient(0deg, #FFD700, #DA70D6);
+}
+
+.txt2{
+	color: #ACB6E5;
+  	background: -webkit-linear-gradient(0deg, #DA70D6, #00CED1);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  	box-sizing: border-box;
+  	border-left: 1px solid #FFD700;
+  	border-right: 1px solid #DA70D6;
+  	margin-bottom:15px;
+}
+
+.txt2:before,
+.txt2:after {
+	background: -webkit-linear-gradient(0deg, #DA70D6, #00CED1);
+}
+
+.txt3{
+
+	color: #ACB6E5;
+  	background: -webkit-linear-gradient(0deg, #00CED1, #3300CC);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  	box-sizing: border-box;
+  	border-left: 1px solid #FFD700;
+  	border-right: 1px solid #DA70D6;
+  	margin-bottom:15px;
+}
+
+.txt3:before,
+.txt3:after {
+	background: -webkit-linear-gradient(0deg, #00CED1, #3300CC);
+}
+
+.txt4{
+
+	color: #ACB6E5;
+  	background: -webkit-linear-gradient(0deg, #3300CC, #FF367F);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  	box-sizing: border-box;
+  	border-left: 1px solid #FFD700;
+  	border-right: 1px solid #DA70D6;
+  	margin-bottom:15px;
+}
+
+.txt4:before,
+.txt4:after {
+	background: -webkit-linear-gradient(0deg, #3300CC, #FF367F);
+}
+
+.txt5{
+
+	color: #ACB6E5;
+  	background: -webkit-linear-gradient(0deg, #FF367F, #8B008B);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  	box-sizing: border-box;
+  	border-left: 1px solid #FFD700;
+  	border-right: 1px solid #DA70D6;
+  	margin-bottom:15px;
+}
+
+.txt5:before,
+.txt5:after {
+	background: -webkit-linear-gradient(0deg, #FF367F, #8B008B);
+}
+
+.txt6{
+
+	color: #ACB6E5;
+  	background: -webkit-linear-gradient(0deg, #FFD700, #DA70D6);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  	box-sizing: border-box;
+  	border-left: 1px solid #FFD700;
+  	border-right: 1px solid #DA70D6;
+  	margin-bottom:15px;
+}
+
+.txt6:before,
+.txt6:after {
+	background: -webkit-linear-gradient(0deg, #FFD700, #DA70D6);
+}
+
+.table-c{
+	position:fixed;
+	left:10px;
+	bottom:65px;
+}
+
+.table-c th{
+	font-family:sans-serif;
+	font-weight:100;
+}
+
+.table-c td{
+	height:20px;
+}
+
+#credit1{
+	font-family:sans-serif;
+	font-weight:100;
+	font-size:13px;
+	position:fixed;
+	left:10px;
+	bottom:190px;
+}
+
+#credit2{
+	font-family:sans-serif;
+	font-weight:100;
+	font-size:13px;
+	position:fixed;
+	left:220px;
+	bottom:190px;
+}
+
+.new-content{
+	margin-top:40px;
+	margin-left:15px;
+}
+
+.new-text{
+	border:2px #EEEEEE solid;
+	margin-left:40px;
+	width:35vh;
+	height:4vh;
+}
+
+.show-th{
+	margin-top:30px;
+	margin-left:10px;
+	margin-right:10px;
+	border-collapse:collapse;
+	background-color: #EEEEEE ;
+}
+
+.show-th tr{
+	border:15px solid white;
+	border-right-style:none;
+	border-left-style:none;
+}
+
+.show-th th,td{
+	text-align:center;
+	text-valign:middle;
+	position:relative;
+	font-family:sans-serif;
+	font-weight:100;
+	font-size:15px;
+	padding-top:7px;
+	padding-bottom:7px
+}
+
+.show-th td{
+	padding-left:50px;
+}
+
+#lesson_term{
+	margin-left:40px;
+	border:2px #EEEEEE solid;
+}
+
+#lesson_week{
+	margin-left:40px;
+	border:2px #EEEEEE solid;
+}
+
+#lesson_period{
+	margin-left:40px;
+	border:2px #EEEEEE solid;
+}
+
+.rink{
+	margin-bottom:80px;
 }

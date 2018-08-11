@@ -1,41 +1,41 @@
-<h1>Lessons#edit</h1>
-<p>Find me in app/views/lessons/edit.html.erb</p<div style="width: 300px;">
-  <%= form_for(@lesson) do |f| %>
-    <div>
-      <%= f.label :name %>
-      <%= f.text_field :name, size: 50 %>
+<h1><%= @lesson.name %></h1>
+<div style="width: 300px;">
+  <%= form_for(@lesson) do |f| %> 
+    <div class="new-content">
+      <%= f.label :name ,"授業名"%>
+      <%= f.text_field :name, size: 30 ,:class => "new-text"%>
     </div>
-    <div>
-      <%= f.label :description %>
-      <%= f.text_area :description %>
+    <div class="new-content">
+      <%= f.label :description ,"授業詳細"%>
+      <%= f.text_area :description ,:class => "new-text"%>
     </div>
-    <div>
-      <%= f.label :teacher_name %>
-      <%= f.text_area :teacher_name %>
+    <div class="new-content">
+      <%= f.label :teacher_name ,"教授名"%>
+      <%= f.text_area :teacher_name ,:class => "new-text"%>
     </div>
-    <div>
-      <%= f.label :credit %>
-      <%= f.text_area :credit %>
+    <div class="new-content">
+      <%= f.label :credit ,"単位"%>
+      <%= f.text_area :credit ,:class => "new-text"%>
     </div>
-    <div>
-      <%= f.label :grade %>
-      <%= f.text_area :grade %>
+    <div class="new-content">
+      <%= f.label :grade ,"学年"%>
+      <%= f.text_area :grade ,:class => "new-text"%>
     </div>
-    <div>
-      <%= f.label :term %>
-      <%= f.text_area :term %>
+    <div class="new-content">
+      <%= f.label :term ,"学期"%>
+      <%= f.select :term, [["前期", "0"], ["後期", "1"]] %>
     </div>
-    <div>
-      <%= f.label :week %>
-      <%= f.text_area :week %>
+    <div class="new-content">
+      <%= f.label :week ,"曜日"%>
+      <%= f.select :week, [["月", "0"], ["火", "1"],["水", "2"],["木", "3"],["金", "4"],["土", "5"]],  :prompt => "選択してください" %>
     </div>
-    <div>
-      <%= f.label :period %>
-      <%= f.text_area :period %>
+    <div class="new-content">
+      <%= f.label :period ,"何限"%>
+      <%= f.select :period, [["1限", "0"], ["2限", "1"],["3限","2"],["4限","3"],["5限","4"]]%>
     </div>
-    <div>
-      <%= f.label :absence_count %>
-      <%= f.text_area :absence_count %>
+    <div class="new-content">
+      <%= f.label :absence_count ,"欠席回数"%>
+      <%= f.text_area :absence_count ,:class => "new-text"%>
     </div>
     <%= f.submit 'Submit' %>
   <% end %>

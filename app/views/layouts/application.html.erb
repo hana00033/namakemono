@@ -11,7 +11,7 @@
   </head>
 
   <body>
-     <nav>
+     <!-- <nav>
       <% if user_signed_in? %>
         <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
       <% else %>
@@ -21,12 +21,20 @@
       <% if user_signed_in? %>
       username : <%= current_user.username %>さん
       <% end %>
-      </nav>
+      </nav> -->
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
-      <div class="container" >
-       
+
+      <div class="item1">
+        
       </div>
-      <%= yield %>
+      <div class="container" >
+       <%= image_tag("icon1.png", :class => "item") %>
+       <%= image_tag("icon2.png", :class => "item") %>
+       <%= image_tag("icon3.png", :class => "item") %>
+      </div>
+      <div class="main-container">
+        <%= yield %>
+      </div>
   </body>
 </html>
