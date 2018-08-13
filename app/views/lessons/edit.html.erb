@@ -1,43 +1,43 @@
 <h1><%= @lesson.name %></h1>
+<%= link_to image_tag("icon5.png",:class => "yazirushi"), lessons_path %>
 <div style="width: 300px;">
   <%= form_for(@lesson) do |f| %> 
     <div class="new-content">
-      <%= f.label :name ,"授業名"%>
-      <%= f.text_field :name, size: 30 ,:class => "new-text"%>
+      <%= f.label :name ,"授業名"%><br>
+      <%= f.text_field :name, size: 30 , :class => "new-text"%>
     </div>
     <div class="new-content">
-      <%= f.label :description ,"授業詳細"%>
+      <%= f.label :description ,"授業詳細"%><br>
       <%= f.text_area :description ,:class => "new-text"%>
     </div>
     <div class="new-content">
-      <%= f.label :teacher_name ,"教授名"%>
+      <%= f.label :teacher_name ,"教授名"%><br>
       <%= f.text_area :teacher_name ,:class => "new-text"%>
     </div>
     <div class="new-content">
-      <%= f.label :credit ,"単位"%>
+      <%= f.label :credit ,"単位"%><br>
       <%= f.text_area :credit ,:class => "new-text"%>
     </div>
     <div class="new-content">
-      <%= f.label :grade ,"学年"%>
+      <%= f.label :grade ,"学年"%><br>
       <%= f.text_area :grade ,:class => "new-text"%>
     </div>
     <div class="new-content">
-      <%= f.label :term ,"学期"%>
+      <%= f.label :term ,"学期"%><br>
       <%= f.select :term, [["前期", "0"], ["後期", "1"]] %>
     </div>
     <div class="new-content">
-      <%= f.label :week ,"曜日"%>
+      <%= f.label :week ,"曜日"%><br>
       <%= f.select :week, [["月", "0"], ["火", "1"],["水", "2"],["木", "3"],["金", "4"],["土", "5"]],  :prompt => "選択してください" %>
     </div>
     <div class="new-content">
-      <%= f.label :period ,"何限"%>
+      <%= f.label :period ,"何限"%><br>
       <%= f.select :period, [["1限", "0"], ["2限", "1"],["3限","2"],["4限","3"],["5限","4"]]%>
     </div>
     <div class="new-content">
-      <%= f.label :absence_count ,"欠席回数"%>
+      <%= f.label :absence_count ,"欠席回数"%><br>
       <%= f.text_area :absence_count ,:class => "new-text"%>
     </div>
-    <%= f.submit 'Submit' %>
+    <%= f.submit 'Submit' ,:class => "rink"%>
   <% end %>
 </div>
-<p><%= link_to '一覧に戻る', lessons_url %></p>

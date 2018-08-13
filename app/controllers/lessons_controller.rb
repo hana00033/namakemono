@@ -51,11 +51,11 @@ def about
 end
 
 def graph
-
+  @lesson = target_lesson params[:id]
 end
 
 def credit
-
+  @lessons = current_user.lessons
 end
 
 end

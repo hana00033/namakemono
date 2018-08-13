@@ -7,6 +7,7 @@
 }
 
 h1{
+	position:fixed;
 	font-family:sans-serif;
 	font-weight:100;
 	font-size:20px;
@@ -16,10 +17,35 @@ h1{
 	width: 100vw;
 	text-align: center;
 	left: 0;
+	z-index:100;
+}
+
+.yazirushi{
+	position:fixed;
+	margin-top:0px;
+	width:20px;
+	height:20px;
+	z-index:100;
+	margin-left:5px;
+}
+
+#trash{
+	position:fixed;
+	z-index:100;
+	width:23px;
+	height:25px;
+	margin-top:0px;
+	margin-left:290px;
+	margin-bottom:50px;
+}
+
+.clears{
+	width:54px;
+	height:1px;
 }
 
 .table-s{
-	margin-top:6px;
+	margin-top:30px;
 	margin-bottom:70px;
 }
 
@@ -30,6 +56,13 @@ h1{
 
 .table-s td{
 	height:16vh;
+}
+
+.plus{
+	width:15px;
+	height:15px;
+	margin-left:30px;
+	margin-bottom:30px;
 }
 
 .item_g{
@@ -210,11 +243,16 @@ h1{
 .new-content{
 	margin-top:40px;
 	margin-left:15px;
+	font-family:sans-serif;
+	font-weight:100;
+	font-size:13px;
+	border-bottom:4px dashed #EEEEEE;
 }
 
 .new-text{
 	border:2px #EEEEEE solid;
 	margin-left:40px;
+	margin-bottom:10px;
 	width:35vh;
 	height:4vh;
 }
@@ -264,5 +302,10 @@ h1{
 }
 
 .rink{
-	margin-bottom:80px;
+	padding-bottom:100px;
 }
+
+.space{
+	padding-top:50px;
+}
+

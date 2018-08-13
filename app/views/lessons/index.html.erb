@@ -21,7 +21,6 @@
   </tr>
   <% end %>
 </table> -->
-<p><%= link_to '授業の登録', new_lesson_path %></p>
 
 <h1>時間割</h1>
 
@@ -36,51 +35,28 @@
 <th bgcolor="#FFFFFF" width="50"><font color="#000000">金</font></th>
 <th bgcolor="#FFFFFF" width="50"><font color="#000000">土</font></th>
 </tr>
-<tr>
-<td bgcolor="#FFFFFF" align="right" nowrap>1</td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-</tr>
-<tr>
-<td bgcolor="#FFFFFF" align="right" nowrap>2</td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-</tr>
-<tr>
-<td bgcolor="#FFFFFF" align="right" nowrap>3</td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-</tr>
-<tr>
-<td bgcolor="#FFFFFF" align="right" nowrap>4</td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-</tr>
-<tr>
-<td bgcolor="#FFFFFF" align="right" nowrap>5</td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-<td bgcolor="#FFFFFF" valign="top" width="75"></td>
-</tr>
-</table>
+<% (0..4).each do |i| %>
+  <tr>
+    <% (0..6).each do |j| %>
+      <% if j==0 then %>
+        <td bgcolor="#FFFFFF" align="right" nowrap><%= i+1 %></td>
+      <% else %>
+        <td bgcolor="#FFFFFF" valign="top" width="75">
 
+        <% @at_lesson = @lessons.find_by(week: j-1, period: i) %>
+        <% if @at_lesson %>
+          <%= @at_lesson.name %>
+          <%= link_to image_tag("clear1.png",{:border => '0',:class => "clears"}), controller: "lessons", action: "show", :id => @at_lesson.id %>
+        <% else %>
+          <%=  link_to image_tag('icon6.png', { :border => '0', :class => "plus"}), controller: "lessons", action: "new", params: {week: j-1, period: i}%>
+        <% end %>
+        </td>
+      <% end %>
+    <% end %>
+  </tr>
+<% end %>
+
+
+
+</table> 
 

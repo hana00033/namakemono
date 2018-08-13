@@ -1,4 +1,6 @@
-<h1>授業名（仮）</h1>
+<h1><%= @lesson.name %></h1>
+<%= link_to image_tag("icon5.png",:class => "yazirushi"), lessons_path %>
+<%= link_to image_tag("icon7.png",:id=>"trash"), lesson_path(@lesson.id), method: :delete %>
 <table class="show-th">
   <tr>
     <th>授業名</th>
@@ -41,4 +43,4 @@
     <td><%= @lesson.user.email %></td>
   </tr>
 </table>
-<p><%= link_to '一覧に戻る', lessons_url %></p>
+<%= link_to "編集する", {controller: "lessons", action: "edit", :id => @lesson.id },{:class => "rink"} %>
