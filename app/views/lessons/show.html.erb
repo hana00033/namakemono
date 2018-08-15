@@ -1,6 +1,27 @@
 <h1><%= @lesson.name %></h1>
 <%= link_to image_tag("icon5.png",:class => "yazirushi"), lessons_path %>
 <%= link_to image_tag("icon7.png",:id=>"trash"), lesson_path(@lesson.id), method: :delete %>
+
+<%= link_to image_tag("icon9.png",:id => "edit_show"), {controller: "lessons", action: "edit", :id => @lesson.id }%>
+
+
+
+<% @new_period = (@lesson.period+1).to_s %>
+<% @new_week %>
+<% if @lesson.week ==0 then%>
+  <% @new_week = "月曜日" %>
+<% elsif @lesson.week ==1 then%>
+  <% @new_week = "火曜日" %>
+<% elsif @lesson.week ==2 then%>
+  <% @new_week = "水曜日" %>
+<% elsif @lesson.week ==3 then%>
+  <% @new_week = "木曜日" %>
+<% elsif @lesson.week ==4 then%>
+  <% @new_week = "金曜日" %>
+<% elsif @lesson.week == 5 then%>
+  <% @new_week = "土曜日" %>
+<% end %>
+
 <table class="show-th">
   <tr>
     <th>授業名</th>
@@ -28,11 +49,11 @@
   </tr>
   <tr>
     <th>曜日</th>
-    <td><%= @lesson.week %></td>
+    <td><%= @new_week %></td>
   </tr>
   <tr>
     <th>何限</th>
-    <td><%= @lesson.period %></td>
+    <td><%= @new_period+"限"%></td>
   </tr>
   <tr>
     <th>欠席数</th>
@@ -43,4 +64,5 @@
     <td><%= @lesson.user.email %></td>
   </tr>
 </table>
-<%= link_to "編集する", {controller: "lessons", action: "edit", :id => @lesson.id },{:class => "rink"} %>
+
+

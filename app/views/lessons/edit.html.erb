@@ -38,6 +38,14 @@
       <%= f.label :absence_count ,"欠席回数"%><br>
       <%= f.text_area :absence_count ,:class => "new-text"%>
     </div>
-    <%= f.submit 'Submit' ,:class => "rink"%>
+    <div class="submit">
+    <% button_tag type: :submit do %>
+      <% image_tag "icon8.png" %>
+    <% end %>
+
+    <%= image_submit_tag "icon8.png" %>
+    <h2>保存</h2>
+    </div>
+    <p class="space2"></p>
   <% end %>
 </div>

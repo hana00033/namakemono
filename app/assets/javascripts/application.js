@@ -13,3 +13,7 @@
 //= require rails-ujs
 //= require activestorage
 //= require_tree .
+
+function _plus(absence) {
+	absence += 1;
+}

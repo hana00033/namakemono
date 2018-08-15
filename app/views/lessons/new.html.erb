@@ -15,7 +15,11 @@
   <% @new_week = "土曜日" %>
 <% end %>
 
-<h1><%= @new_week%></h1>
+<% @ps_period = @p_period.to_s %>
+
+<% @head = @new_week + @ps_period%>
+
+<h1><%= @head %>限</h1>
 <%= link_to image_tag("icon5.png",:class => "yazirushi"), lessons_path %>
 <div style="width: 300px;">
   <%= form_for(@lesson) do |f| %>
@@ -45,14 +49,19 @@
     </div>
     <div class="new-content">
       <%= f.label :week, "曜日" %><br>
-      <%= f.select :week, [["月", "0"], ["火", "1"],["水", "2"],["木", "3"],["金", "4"],["土", "5"]],  :prompt => "選択してください" %>
+          <% if params[:week]%>
+            <p><%= @new_week %></p>
+            <% @p_week.to_s %>
+            <%= f.hidden_field :week,  :value =>params[:week] %>
+          <% else %>
+            <%= f.select :week, [["月", "0"], ["火", "1"],["水", "2"],["木", "3"],["金", "4"],["土", "5"]],  :prompt => "選択してください" %>
+          <% end %>
     </div>
     <div class="new-content">
         <%= f.label :period, "何限" %><br>
           <% if params[:period]%>
-          <p><%= @p_period%>限</p>
-            <% @p_period.to_s %>
-            <%= f.hidden_field :period,@p_period%>
+            <p><%= @p_period%>限</p>
+            <%= f.hidden_field :period,  :value =>params[:period] %>
           <% else %>
             <%= f.select :period, [["1限", "0"], ["2限", "1"],["3限","2"],["4限","3"],["5限","4"]]%>
           <% end %>
@@ -61,7 +70,15 @@
       <%= f.label :absence_count, "欠席・遅刻回数" %><br>
       <%= f.text_area :absence_count ,:class => "new-text"%>
     </div>
-    <%= f.submit 'Submit' %>
+    <div class="submit">
+    <% button_tag type: :submit do %>
+      <% image_tag "icon8.png" %>
+    <% end %>
+
+    <%= image_submit_tag "icon8.png" %>
+    <h2>保存</h2>
+    </div>
+    <p class="space"></p>
   <% end %>
+    
 </div>
-<p class="rink"><%= link_to '一覧に戻る', lessons_url %></p>

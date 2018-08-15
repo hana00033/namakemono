@@ -6,16 +6,26 @@
 <th bgcolor="#FFFFFF" width="150"><font color="#000000">単位数</font></th>
 </tr>
 
-<% (0..1).each do |i| %>
+<% @lessons.each_with_index do |x,j| %>
   <tr>
-    <% @lessons.each do |x,j| %>
-    	<%= puts "#{i}: #{x}" %>
-        
+    <% (0..1).each do |i| %>
+    	<td bgcolor="#FFFFFF" valign="top" width="75">
+    	<% @at_lesson = @lessons.find_by(id: j+1) %>
+        	<% if @at_lesson %>
+        		<% if i==0 then%>
+          			<%= @at_lesson.name %>
+          		<% else %>
+          			<%= @at_lesson.credit%>
+          		<% end %>
+        	<% else %>
+          		<% break %>
+        	<% end %>
+        </td>
     <% end %>
   </tr>
 <% end %>
 
-<table class="table-c" border="1" cellspacing="0" cellpadding="0" bordercolor="#A4A4A4" align="right">
+<!-- <table class="table-c" border="1" cellspacing="0" cellpadding="0" bordercolor="#A4A4A4" align="right">
 <tr>
 <th bgcolor="#FFFFFF" width="150"><font color="#000000">授業名</font></th>
 <th bgcolor="#FFFFFF" width="150"><font color="#000000">単位数</font></th>
@@ -43,4 +53,4 @@
 </table>
 
 <p id="credit1">取得単位見込み</p>
-<p id="credit2">合計</p>
+<p id="credit2">合計</p> -->

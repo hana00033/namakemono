@@ -37,15 +37,6 @@ def destroy
   redirect_to lessons_url
 end
 
-private
-def target_lesson lesson_id
-  current_user.lessons.where(id: lesson_id).take
-end
-
-def lesson_params
-  params.require(:lesson).permit(:name, :description, :teacher_name, :credit, :grade, :term, :week, :period, :absence_count)
-end
-
 def about
   @lesson = target_lesson params[:id]
 end
@@ -56,6 +47,44 @@ end
 
 def credit
   @lessons = current_user.lessons
+end
+
+def monday
+
+end
+
+def thuesday
+
+end
+
+def wednesday
+
+end
+
+def thursday
+
+end
+
+def friday
+
+end
+
+def saturday
+
+end
+
+def edit2 
+  @lesson = target_lesson params[:id]
+  # @lesson = Lesson.find(params[:id])
+end
+
+private
+def target_lesson lesson_id
+  current_user.lessons.where(id: lesson_id).take
+end
+
+def lesson_params
+  params.require(:lesson).permit(:name, :description, :teacher_name, :credit, :grade, :term, :week, :period, :absence_count)
 end
 
 end
