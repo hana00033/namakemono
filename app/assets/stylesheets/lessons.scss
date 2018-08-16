@@ -1,6 +1,97 @@
 // Place all the styles related to the lessons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.new-body{
+	background-image: url('bg.png');
+}
+
+
+
+.submit_user{
+	margin-top:30px;
+	margin-left:42%;
+	color:white;
+}
+
+h3{
+	position:fixed;
+	font-family:sans-serif;
+	font-weight:100;
+	font-size:20px;
+	color:white;
+	width: 100vw;
+	text-align: center;
+	left: 0;
+	z-index:100;
+	padding-top:10px;
+}
+
+.new-passward{
+	border:2px #EEEEEE solid;
+	margin-bottom:10px;
+	width:35vh;
+	height:4vh;
+}
+
+.forget_passward{
+	margin-top:30px;
+	margin-left:14%;
+	color:white;
+}
+
+.field-home{
+	padding-top:70px;
+	text-align:center;
+	font-size:15px;
+	color:white;
+}
+
+.field-home a{
+	margin-top:30px;
+	margin-left:0%;
+	color:white;
+}
+
+
+.field{
+	padding-top:30px;
+	text-align:center;
+	font-size:15px;
+	color:white;
+}
+
+.field a{
+	text-decoration: none;
+	color:white;
+}
+
+.login{
+	position:relative;
+	width: 74%;
+	margin:0 auto;
+   
+}
+
+.login input{
+	display: block;
+    width: 100%;
+    height:40px;
+}
+
+.login image_submit_tag{
+}
+
+.login h2{
+	position:absolute;
+	font-size:20px;
+	top: 50%;
+  	left: 50%;
+  	-ms-transform: translate(-50%,-50%);
+  	-webkit-transform: translate(-50%,-50%);
+  	transform: translate(-50%,-50%);
+  	margin:0;
+  	padding:0;
+}
 
 .table th{
 	white-space: nowrap;
@@ -36,6 +127,15 @@ h1{
 	height:25px;
 	top:1.3%;
 	left:90%;
+}
+
+.haguruma{
+	position:fixed;
+	margin-top:-6px;
+	width:35px;
+	height:35px;
+	z-index:100;
+	margin-left:10px;
 }
 
 .clears{
@@ -206,10 +306,26 @@ h1{
 	background: -webkit-linear-gradient(0deg, #FFD700, #DA70D6);
 }
 
+.credit_num{
+	position:relative;
+	text-align:center;
+}
+
+.credit_num p{
+ 	position:absolute;
+ 	top: 53%;
+  	left: 50%;
+  	-ms-transform: translate(-50%,-53%);
+  	-webkit-transform: translate(-50%,-53%);
+  	transform: translate(-50%,-53%);
+  	margin:0;
+  	padding:0;
+}
+
 .table-c{
-	position:fixed;
-	left:10px;
-	bottom:65px;
+	margin-right:3%;
+	margin-top:30px;
+	margin-bottom:65px;
 }
 
 .table-c th{
@@ -283,6 +399,7 @@ h1{
 
 .show-th td{
 	padding-left:50px;
+	width:83%;
 }
 
 #lesson_term{
@@ -320,9 +437,12 @@ h1{
 
 .submit{
 	position:relative;
+	width: 100%;
+	margin:0 auto;
 }
 
-.submit image_submit_tag{
+.submit input{
+	display: block;
 	width: 100vw;
 	background-size: cover;
 }
@@ -330,10 +450,10 @@ h1{
 .submit h2{
 	position:absolute;
 	top: 50%;
-  	left: 55%;
-  	-ms-transform: translate(-50%,-55%);
-  	-webkit-transform: translate(-50%,-55%);
-  	transform: translate(-50%,-55%);
+  	left: 60%;
+  	-ms-transform: translate(-50%,-60%);
+  	-webkit-transform: translate(-50%,-60%);
+  	transform: translate(-50%,-60%);
   	margin:0;
   	padding:0;
 }

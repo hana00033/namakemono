@@ -1,29 +1,24 @@
 <h1>単位</h1>
 
+<div class="credit_num">
+<canvas id="myChart1" width="400" height="400"></canvas>
+<script>draw_graph1();</script>
+<p><%= @amount%>/<%= @am%></p>
+</div>
+
 <table class="table-c" border="1" cellspacing="0" cellpadding="0" bordercolor="#A4A4A4" align="right">
 <tr>
 <th bgcolor="#FFFFFF" width="150"><font color="#000000">授業名</font></th>
 <th bgcolor="#FFFFFF" width="150"><font color="#000000">単位数</font></th>
 </tr>
 
-<% @lessons.each_with_index do |x,j| %>
+<% @lessons.each do |lessons| %>
   <tr>
-    <% (0..1).each do |i| %>
-    	<td bgcolor="#FFFFFF" valign="top" width="75">
-    	<% @at_lesson = @lessons.find_by(id: j+1) %>
-        	<% if @at_lesson %>
-        		<% if i==0 then%>
-          			<%= @at_lesson.name %>
-          		<% else %>
-          			<%= @at_lesson.credit%>
-          		<% end %>
-        	<% else %>
-          		<% break %>
-        	<% end %>
-        </td>
-    <% end %>
+    <td bgcolor="#FFFFFF" valign="top" width="75"><%= lessons.name %></td>
+    <td bgcolor="#FFFFFF" valign="top" width="75"><%= lessons.credit %></td>
   </tr>
 <% end %>
+</table>
 
 <!-- <table class="table-c" border="1" cellspacing="0" cellpadding="0" bordercolor="#A4A4A4" align="right">
 <tr>

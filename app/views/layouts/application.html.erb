@@ -5,26 +5,16 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= include_gon %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
 
   <body>
-     <!-- <nav>
-      <% if user_signed_in? %>
-        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to 'サインアップ', new_user_registration_path %>
-        <%= link_to 'ログイン', new_user_session_path %>
-      <% end %>
-      <% if user_signed_in? %>
-      username : <%= current_user.username %>さん
-      <% end %>
-      </nav> -->
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-
+      <!-- <p class="notice"><%= notice %></p> -->
+     <!--  <p class="alert"><%= alert %></p> -->
+    <%if user_signed_in? then%>
       <div class="item1">
         
       </div>
@@ -36,5 +26,11 @@
       <div class="main-container">
         <%= yield %>
       </div>
+
+      <% else %>
+       <div class="new-body">
+        <%= yield %>
+       </div>
+      <% end %>
   </body>
 </html>

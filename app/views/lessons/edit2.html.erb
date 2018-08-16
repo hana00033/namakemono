@@ -1,3 +1,21 @@
 <h1><%= @lesson.name %></h1>
 
-<% button_to(image_tag("icon10.png",:id => "plus"), javascript_include_tag '_plus.js' ) %>
+<%= form_for(@lesson) do |f| %> 
+
+	<% button_to("+" [:name => "plus_botton"] %>
+	<% if plus_botton then%>
+		<%= @lesson.name%>
+	<% end %>
+	<div class="new-content">
+      <%= f.label :absence_count ,"欠席回数"%><br>
+      <%= f.text_area :absence_count ,:class => "new-text"%>
+    </div>
+    <div class="submit">
+    	<% button_tag type: :submit do %>
+      	<% image_tag "icon8.png" %>
+    <% end %>
+
+    	<%= image_submit_tag "icon8.png" %>
+    	<h2>保存</h2>
+    </div>
+<% end %>

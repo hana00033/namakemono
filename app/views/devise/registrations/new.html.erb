@@ -1,39 +1,45 @@
-<h2>Sign up</h2>
+
+
+<h3>新規登録</h3>
+
+<p class="space"></p>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :email ,"メールアドレス"%><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" ,:class => "new-passward"%>
   </div>
 
   <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true, autocomplete: "username" %>
+    <%= f.label :username ,"ユーザー名"%><br />
+    <%= f.text_field :username,autofocus: true, autocomplete: "username" ,:class => "new-passward"%>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password ,"パスワード"%>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(<%= @minimum_password_length %>文字以上)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off" ,:class => "new-passward"%>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.label :password_confirmation, "確認用"%><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" ,:class => "new-passward"%>
   </div>
 
   <div class="field">
-    <%= f.label :amount_credit %><br />
-    <%= f.text_field :amount_credit, autofocus: true, autocomplete: "amount_credit" %>
+    <%= f.label :amount_credit ,"卒業に必要な単位数" %><br />
+    <%= f.text_field :amount_credit,autofocus: true, autocomplete: "amount_credit" ,:class => "new-passward"%>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
+    <%= f.submit "  登録 " ,:class => "submit_user"%>
+
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+<p class="space"></p>
+

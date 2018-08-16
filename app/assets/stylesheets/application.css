@@ -22,6 +22,15 @@ body {
 	min-height: 100vh;
 }
 
+.new-body{
+	position: fixed;
+	background-image: url('bg.png');
+	background-size: cover;
+	width: 100vw;
+	height:100vh;
+	z-index: 1;
+}
+
 .main-container {
 	padding: 10px 0 10px;
 }

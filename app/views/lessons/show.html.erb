@@ -8,6 +8,7 @@
 
 <% @new_period = (@lesson.period+1).to_s %>
 <% @new_week %>
+<% @new_term %>
 <% if @lesson.week ==0 then%>
   <% @new_week = "月曜日" %>
 <% elsif @lesson.week ==1 then%>
@@ -20,6 +21,11 @@
   <% @new_week = "金曜日" %>
 <% elsif @lesson.week == 5 then%>
   <% @new_week = "土曜日" %>
+<% end %>
+<% if @lesson.term==0 then%>
+  <% @new_term = "前期" %>
+<% else %>
+  <% @new_term = "後期" %>
 <% end %>
 
 <table class="show-th">
@@ -45,7 +51,7 @@
   </tr>
   <tr>
     <th>学期</th>
-    <td><%= @lesson.term %></td>
+    <td><%= @new_term %></td>
   </tr>
   <tr>
     <th>曜日</th>
@@ -59,10 +65,10 @@
     <th>欠席数</th>
     <td ><%= @lesson.absence_count %></td>
   </tr>
-  <tr>
+  <!-- <tr>
     <th>メールアドレス</th>
     <td><%= @lesson.user.email %></td>
-  </tr>
+  </tr> -->
 </table>
 
 
