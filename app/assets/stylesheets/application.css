@@ -28,7 +28,7 @@ body {
 
 .new-body{
 	position: fixed;
-	background-image: image-url('bg.png');
+	background-image: url('/assets/images/bg.png');
 	background-size: cover;
 	width: 100vw;
 	height:100vh;
@@ -49,7 +49,7 @@ body {
 	display: flex;
 	justify-content:space-around;
 	align-items:flex-end;
-	background-image: image-url('icon4.png');
+	background-image: url('/assets/images/icon4.png');
 	background-size: cover;
 
 }
@@ -67,6 +67,6 @@ body {
 	z-index: 1;
 	display: flex;
 	align-items:flex-start;
-	background-image: image-url('icon4.png');
+	background-image: url('/assets/images/icon4.png');
 	background-size: cover;
 }
