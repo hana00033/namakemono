@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .new-body{
-	background-image: url('bg.png');
+	background-image: url('images/bg.png');
 }
 
 
@@ -69,7 +69,7 @@ h3{
 	position:relative;
 	width: 74%;
 	margin:0 auto;
-   
+
 }
 
 .login input{
@@ -309,6 +309,7 @@ h1{
 .credit_num{
 	position:relative;
 	text-align:center;
+  padding-top: 60px;
 }
 
 .credit_num p{
