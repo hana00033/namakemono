@@ -14,9 +14,12 @@
 //= require rails-ujs
 //= require jquery
 //= require activestorage
+//= require serviceworker-companion
 //= require_tree .
 
-function _plus(absence) {
-	absence = absence + 1;
-	return absence;
-}
+$(function(){
+  $('a').click(function(){
+    location.href = $(this).attr('href');
+    return false;
+  });
+});

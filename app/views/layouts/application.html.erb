@@ -9,14 +9,17 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-  </head>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="<%=image_path("icon.png")%>" />
+</head>
 
   <body>
       <!-- <p class="notice"><%= notice %></p> -->
      <!--  <p class="alert"><%= alert %></p> -->
     <%if user_signed_in? then%>
       <div class="item1">
-        
+
       </div>
       <div class="container" >
         <%= link_to image_tag("icon1.png",:class => "item"), lessons_path %>
